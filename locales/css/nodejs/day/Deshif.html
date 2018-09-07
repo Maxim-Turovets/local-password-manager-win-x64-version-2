@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+<!-- Begin
+function Encrypt(theText) {
+output = new String;
+Temp = new Array();
+Temp2 = new Array();
+TextSize = theText.length;
+for (i = 0; i < TextSize; i++) {
+	rnd = Math.round(Math.random() * 122) + 68;
+	Temp[i] = theText.charCodeAt(i) + rnd;
+	Temp2[i] = rnd;
+}
+for (i = 0; i < TextSize; i++) {
+	output += String.fromCharCode(Temp[i], Temp2[i]);
+}
+return output;
+}
+function unEncrypt(theText) {
+output = new String;
+Temp = new Array();
+Temp2 = new Array();
+TextSize = theText.length;
+for (i = 0; i < TextSize; i++) {
+	Temp[i] = theText.charCodeAt(i);
+	Temp2[i] = theText.charCodeAt(i + 1);
+}
+for (i = 0; i < TextSize; i = i+2) {
+	output += String.fromCharCode(Temp[i] - Temp2[i]);
+}
+return output;
+}
+//  End -->
+</script>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="file.js"></script>     <!-- Запись в файл -->
+	<link rel="stylesheet" href="css.css" type="text/css"/>
+	<link rel="stylesheet" href="style.css"> 
+
+</head>
+<body >
+
+	<div id="login">
+		<form class="form-container" name="form_text"  align=middle>    
+			<div class="form-title"><h2>Password local manager Decoder</h2></div>
+
+		
+
+			<form name=encform onsubmit="return false;">
+
+<p>
+<textarea name=box2 rows=5 cols=80  ></textarea>
+<p>
+
+
+
+<input class="button" type=button value="Decrypt" onClick="this.form.box3.value=unEncrypt(this.form.box2.value);">
+<br>
+
+<textarea name=box3 rows=20 cols=99   ></textarea>
+<br>
+<input class="button" type=button value="Get Cipher" onClick="this.form.box4.value=Encrypt(this.form.box3.value);">
+<p>
+<textarea name=box4 rows=5 cols=80  ></textarea>
+<p>
+</form>
+
+
+
+
+		</form>
+
+	</div>
+	<br>
+
+
+
+
+ <u align="center"><h3><strong> © Turovets Maxim 2018 KPI FICT</strong></h3></u>
+</body>
+</html>
+
+
