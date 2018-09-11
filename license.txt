@@ -26,8 +26,6 @@ provided that the following conditions are met:
    distribute a product, an acknowledgment in the product documentation
    would be appreciated but is not required.
 
-4. Modified versions in source or binary form must be plainly marked as
-   such, and must not be misrepresented as being the original software.
 
 
 
